@@ -3,6 +3,7 @@ const reset_btn = document.getElementById("reset");
 const lap_btn = document.getElementById("lap");
 const lap_list = document.getElementById("lapList");
 const parameters = document.querySelectorAll(".time h3");
+const info_h2 = document.getElementById("info");
 let play = true;
 let reset = true;
 let lapCount = 0;
@@ -11,6 +12,10 @@ let s = 0;
 let m = 0;
 let h = 0;
 let _interval = "";
+let info_index = 0;
+let letter = 0;
+let maxLength = 0;
+const infos = ["HELLO", "DEVELOPED BY ZAHRA K.RAD", "FRONT-END WEB DEVELOPER"];
 
 playPause_btn.addEventListener("click", () => {
   if (play) {
@@ -85,3 +90,17 @@ function stopwatch() {
     }
   }
 }
+
+setInterval(() => {
+  if (letter < infos[info_index].length) {
+    info_h2.innerHTML = infos[info_index].slice(0, letter++);
+    maxLength = letter;
+  } else {
+    if (maxLength != 0) {
+      info_h2.innerHTML = infos[info_index].slice(0, maxLength--);
+    } else {
+      info_index < infos.length - 1 ? info_index++ : (info_index = 0);
+      letter = 0;
+    }
+  }
+}, 250);
