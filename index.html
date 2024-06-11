@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/fontello-0a8f8b3a/css/fontello.css" />
+    <link rel="stylesheet" href="src/master.css" />
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <main>
+      <h1>Stopwatch</h1>
+      <section>
+        <div class="time">
+          <div>
+            <h3 id="hour">00</h3>
+            :
+            <h3 id="minute">00</h3>
+            :
+            <h3 id="second">00</h3>
+          </div>
+          <h3 id="miliSecond">00</h3>
+        </div>
+        <div>
+          <button id="reset">
+            <span class="icon-ccw"></span>
+          </button>
+          <button id="play-pause">
+            <span class="icon-play"></span>
+            <span class="icon-pause hidden"></span>
+          </button>
+          <button id="lap">
+            <span class="icon-stopwatch"></span>
+          </button>
+        </div>
+        <ul id="lapList">
+          <!-- <li>
+            <span> # <span>01</span> - <span>Lap</span> </span>
+            <span class="time">
+              <div class="time">
+                <h3 id="hour">00</h3>
+                :
+                <h3 id="minute">00</h3>
+                :
+                <h3 id="second">00</h3>
+              </div>:
+              <h3 id="miliSecond">00</h3>
+            </span>
+          </li> -->
+        </ul>
+      </section>
+    </main>
+
+    <script src="src/master.js"></script>
+  </body>
+</html>

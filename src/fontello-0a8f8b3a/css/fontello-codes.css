@@ -1,0 +1,5 @@
+
+.icon-ccw:before { content: '\e800'; } /* '' */
+.icon-play:before { content: '\e801'; } /* '' */
+.icon-pause:before { content: '\e802'; } /* '' */
+.icon-stopwatch:before { content: '\e803'; } /* '' */
